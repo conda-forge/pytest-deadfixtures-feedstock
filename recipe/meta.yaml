@@ -1,18 +1,18 @@
 {% set name = "pytest-deadfixtures" %}
-{% set version = "2.2.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytest-deadfixtures-{{ version }}.tar.gz
-  sha256: ca15938a4e8330993ccec9c6c847383d88b3cd574729530647dc6b492daa9c1e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 08704a1301ee4c631d33f70af4c48ac5904ee4d48656161fa66e6eca07491492
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
