@@ -1,5 +1,5 @@
 {% set name = "pytest-deadfixtures" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 08704a1301ee4c631d33f70af4c48ac5904ee4d48656161fa66e6eca07491492
+  sha256: a8010e771183176fa9d918c8c49293ca5568597c8e1453ed2bbd41bcee67bde5
 
 build:
   noarch: python
